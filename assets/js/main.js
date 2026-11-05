@@ -136,15 +136,9 @@
       return String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     }
     function card(s) {
-      const media = s.img
-        ? `<img src="${s.img}" alt="${esc(s.alt)}" loading="lazy" width="480" height="600">`
-        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.3C.3 7.8 2 4 6 4c2.4 0 3.9 1.3 6 3.6C14.1 5.3 15.6 4 18 4c4 0 5.7 3.8 4 7.7C19.5 16.4 12 21 12 21Z"/></svg>`;
       return `<article class="service-card" data-cat="${s.categoria}">
-        <div class="service-media${s.img ? "" : " no-photo"}">
-          ${media}
-          <span class="service-tag">${esc(s.tag)}</span>
-        </div>
         <div class="service-body">
+          <span class="service-tag">${esc(s.tag)}</span>
           <h3>${esc(s.nombre)}</h3>
           <p>${esc(s.desc)}</p>
           <div class="service-meta">
