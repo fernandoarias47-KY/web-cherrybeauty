@@ -1,116 +1,438 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portafolio | CherryBeauty</title>
-<meta name="description" content="Galería de trabajos reales de CherryBeauty: uñas, pestañas, cejas y cabello.">
-<link rel="icon" type="image/webp" href="assets/images/logo-cherrybeauty.webp">
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
+/* CherryBeauty — hoja de estilos compartida
+   Paleta: Cherry Red / Bubblegum Pink / Galactic Violet / Crema / Oscuro */
 
-<header class="site-header">
-  <nav class="nav-inner container" aria-label="Menú principal">
-    <a class="brand cherry-mark" href="index.html">
-      <img src="assets/images/logo-cherrybeauty.webp" alt="" width="36" height="36">
-      <span class="brand-word">Cherry<em>Beauty</em></span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="index.html#servicios">Servicios</a>
-      <a href="portafolio.html" aria-current="page">Portafolio</a>
-      <a href="index.html#estudio">El estudio</a>
-      <a href="index.html#ubicacion">Ubicación</a>
-      <a class="nav-cta" href="index.html#servicios">Agenda tu hora</a>
-    </div>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="index.html">Inicio</a>
-    <a href="index.html#servicios">Servicios</a>
-    <a href="portafolio.html">Portafolio</a>
-    <a href="index.html#estudio">El estudio</a>
-    <a href="index.html#ubicacion">Ubicación</a>
-    <a href="index.html#servicios">Agenda tu hora</a>
-  </div>
-</header>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-<main id="contenido">
-  <section class="container portfolio-hero">
-    <p class="hero-eyebrow cherry-mark"><span data-icon="sparkle"></span> Galería</p>
-    <h1>Nuestros trabajos</h1>
-    <p>Un poquito de lo que creamos en CherryBeauty.</p>
-  </section>
+:root{
+  --cherry:#BF0054;
+  --cherry-deep:#920040;
+  --bubblegum:#FFB6D5;
+  --bubblegum-soft:#FFE3EE;
+  --violet:#422FA9;
+  --violet-soft:#EDEAFB;
+  --cream:#F8F2E8;
+  --cream-deep:#F0E6D6;
+  --ink:#33252B;
+  --ink-soft:#6B5A60;
+  --white:#FFFFFF;
 
-  <section class="container" aria-labelledby="galeria-title">
-    <h2 id="galeria-title" class="visually-hidden">Galería de trabajos por categoría</h2>
-    <div class="filter-row" role="group" aria-label="Filtrar galería por categoría">
-      <button class="filter-chip is-active" data-filter="todos">Todos</button>
-      <button class="filter-chip" data-filter="softgel">Soft gel</button>
-      <button class="filter-chip" data-filter="kapping">Kapping</button>
-      <button class="filter-chip" data-filter="esmaltado">Esmaltado permanente</button>
-      <button class="filter-chip" data-filter="lifting">Lifting coreano</button>
-      <button class="filter-chip" data-filter="cabello">Cuidado capilar</button>
-    </div>
+  --font-display:'Fraunces', Georgia, serif;
+  --font-body:'Manrope', system-ui, -apple-system, sans-serif;
 
-    <div class="gallery-grid" id="gallery-grid"></div>
+  --radius-lg:28px;
+  --radius-sm:14px;
+  --container:1180px;
+  --shadow:0 18px 40px -22px rgba(51,37,43,.35);
+}
 
-    <div class="portfolio-cta">
-      <p>¿Quieres ver más? Síguenos en Instagram para las últimas fotos y videos.</p>
-      <a class="btn btn-primary" href="https://www.instagram.com/cherrybeauty.cll/" target="_blank" rel="noopener">Ver más trabajos en Instagram</a>
-    </div>
-  </section>
-</main>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="brand cherry-mark" href="index.html">
-          <img src="assets/images/logo-cherrybeauty.webp" alt="" width="32" height="32">
-          <span class="brand-word">Cherry<em>Beauty</em></span>
-        </a>
-        <p>Uñas, pestañas, cejas y cabello en un estudio privado en Huechuraba, Santiago.</p>
-      </div>
-      <nav class="footer-links" aria-label="Navegación">
-        <h4>Navegación</h4>
-        <a href="index.html">Inicio</a>
-        <a href="index.html#servicios">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="index.html#estudio">El estudio</a>
-        <a href="index.html#ubicacion">Ubicación</a>
-      </nav>
-      <div class="footer-links">
-        <h4>Contacto</h4>
-        <a data-wa-text="Hola! Quiero agendar o cotizar un servicio en CherryBeauty." target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.instagram.com/cherrybeauty.cll/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> CherryBeauty · Valentina Arias</span>
-      <span>Huechuraba, Santiago</span>
-    </div>
-  </div>
-</footer>
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
 
-<a class="wa-float" data-wa-text="Hola! Quiero agendar o cotizar un servicio en CherryBeauty." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.03 3C9.37 3 3.97 8.4 3.97 15.06c0 2.23.6 4.32 1.65 6.12L3 29l8.02-2.56a12.9 12.9 0 0 0 5.01 1c6.66 0 12.06-5.4 12.06-12.06C28.09 8.4 22.69 3 16.03 3Zm0 21.96c-1.8 0-3.49-.48-4.95-1.33l-.35-.21-4.76 1.52 1.55-4.63-.23-.37a9.86 9.86 0 0 1-1.53-5.28c0-5.45 4.44-9.89 9.9-9.89 5.45 0 9.88 4.44 9.88 9.89 0 5.45-4.43 9.3-9.51 9.3Zm5.4-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-</a>
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+button{font:inherit;cursor:pointer}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
-  <div class="lightbox-inner">
-    <img src="" alt="">
-    <p class="lightbox-caption"></p>
-  </div>
-  <button type="button" class="lightbox-close" aria-label="Cerrar">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
-  </button>
-</div>
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:500;
+  line-height:1.08;
+  margin:0;
+  color:var(--ink);
+}
+p{margin:0}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{
+  position:absolute;left:16px;top:-60px;background:var(--ink);color:var(--white);
+  padding:10px 18px;border-radius:999px;z-index:200;transition:top .2s ease;
+}
+.skip-link:focus{top:16px}
 
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+
+/* ---------- Cherry glyph (motivo de marca) ---------- */
+.cherry-mark{display:inline-flex;align-items:center;gap:8px}
+.cherry-mark svg{flex:none}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(248,242,232,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(51,37,43,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:36px;width:36px}
+.brand-word{font-family:var(--font-display);font-size:1.3rem;letter-spacing:.01em}
+.brand-word em{font-style:italic;color:var(--cherry)}
+
+.nav-links{display:none;align-items:center;gap:clamp(14px,2vw,30px)}
+.nav-links a{font-weight:600;font-size:.95rem;position:relative;padding:4px 0;white-space:nowrap}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--cherry);
+  transition:width .2s ease;
+}
+.nav-links a:hover::after,.nav-links a[aria-current="page"]::after{width:100%}
+/* El enlace del CTA necesita mayor especificidad que .nav-links a:
+   de lo contrario su padding horizontal se sobrescribe y el texto queda apretado. */
+.nav-links a.nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--cherry);color:var(--white)!important;
+  padding:11px 20px;min-height:42px;border-radius:999px;
+  font-weight:700;font-size:.9rem;line-height:1.2;
+  white-space:nowrap;flex-shrink:0;
+}
+.nav-links a.nav-cta:hover{background:var(--cherry-deep)}
+.nav-links a.nav-cta::after{display:none}
+
+.nav-toggle{
+  display:inline-flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px;
+}
+.nav-toggle span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.mobile-menu{
+  display:none;flex-direction:column;gap:2px;padding:6px 24px 20px;
+  border-bottom:1px solid rgba(51,37,43,.08);background:var(--cream);
+}
+.mobile-menu.is-open{display:flex}
+.mobile-menu a{padding:12px 4px;font-weight:600;border-bottom:1px solid rgba(51,37,43,.06)}
+.mobile-menu a:last-child{border-bottom:none}
+
+@media (min-width:1024px){
+  .nav-links{display:flex}
+  .nav-toggle{display:none}
+  .mobile-menu{display:none!important}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:64px 0 80px;overflow:hidden}
+.hero-grid{display:grid;gap:48px;align-items:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;color:var(--cherry-deep);
+  font-weight:700;font-size:.92rem;margin-bottom:18px;
+}
+.hero h1{font-size:clamp(2.6rem,6vw,3.8rem)}
+.hero h1 .italic{font-style:italic;color:var(--cherry)}
+.hero-lede{margin-top:20px;max-width:46ch;color:var(--ink-soft);font-size:1.08rem}
+.hero-signature{margin-top:26px;font-family:var(--font-display);font-style:italic;color:var(--violet);font-size:1.05rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 28px;border-radius:999px;font-weight:700;font-size:.95rem;
+  border:1px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--cherry);color:var(--white)}
+.btn-primary:hover{background:var(--cherry-deep)}
+.btn-secondary{background:transparent;color:var(--violet);border-color:var(--violet)}
+.btn-secondary:hover{background:var(--violet-soft)}
+.btn-whatsapp{background:var(--ink);color:var(--white)}
+.btn-whatsapp:hover{background:#231a1e}
+
+.portrait{position:relative;justify-self:center}
+.portrait-frame{
+  width:min(360px,80vw);aspect-ratio:3/4;border-radius:200px 200px 24px 24px;overflow:hidden;
+  box-shadow:var(--shadow);border:6px solid var(--white);
+}
+.portrait-frame img{width:100%;height:100%;object-fit:cover}
+.portrait-tag{
+  position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);
+  background:var(--white);border-radius:999px;padding:10px 20px;box-shadow:var(--shadow);
+  font-weight:700;font-size:.85rem;white-space:nowrap;display:flex;align-items:center;gap:8px;
+}
+.portrait-tag svg{flex:none}
+
+.sparkle{position:absolute;color:var(--bubblegum);opacity:.9;pointer-events:none}
+.sparkle svg{display:block}
+
+@media (min-width:860px){
+  .hero-grid{grid-template-columns:1.1fr .9fr}
+  .portrait{justify-self:end}
+}
+
+/* ---------- Secciones genéricas ---------- */
+.section{padding:84px 0}
+.section-alt{background:var(--cream-deep)}
+.section-ink{background:var(--ink);color:var(--cream)}
+.section-ink h2,.section-ink h3{color:var(--cream)}
+.section-head{max-width:640px;margin-bottom:44px}
+.section-head .hero-eyebrow{margin-bottom:14px}
+.section-head h2{font-size:clamp(2rem,4.2vw,2.7rem)}
+.section-head p{margin-top:14px;color:var(--ink-soft);font-size:1.02rem}
+.section-ink .section-head p{color:#D9CFCF}
+
+/* ---------- Sobre mí ---------- */
+.about-grid{display:grid;gap:40px}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+.stat{background:var(--white);border-radius:var(--radius-sm);padding:20px;box-shadow:var(--shadow)}
+.stat strong{display:block;font-family:var(--font-display);font-size:1.9rem;color:var(--cherry)}
+.stat span{font-size:.88rem;color:var(--ink-soft)}
+
+.training-toggle{
+  margin-top:36px;border-top:1px solid rgba(51,37,43,.12);padding-top:18px;max-width:520px;
+}
+.training-toggle summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+  font-weight:700;font-size:1rem;padding:6px 0;
+}
+.training-toggle summary::-webkit-details-marker{display:none}
+.training-toggle summary .chevron{transition:transform .2s ease}
+.training-toggle[open] summary .chevron{transform:rotate(180deg)}
+.training-list{display:grid;gap:10px;margin-top:16px}
+.training-list li{
+  display:flex;gap:10px;align-items:flex-start;background:var(--white);border-radius:var(--radius-sm);
+  padding:12px 16px;font-size:.92rem;box-shadow:var(--shadow);
+}
+.training-list svg{flex:none;margin-top:3px;color:var(--violet)}
+
+@media (min-width:860px){
+  .about-grid{grid-template-columns:.85fr 1.15fr;align-items:start}
+}
+
+/* ---------- Servicios ---------- */
+.filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.filter-chip{
+  padding:10px 20px;border-radius:999px;border:1px solid rgba(51,37,43,.18);
+  background:var(--white);font-weight:600;font-size:.88rem;color:var(--ink-soft);
+  transition:background .15s ease,color .15s ease,border-color .15s ease;
+}
+.filter-chip:hover{border-color:var(--cherry)}
+.filter-chip.is-active{background:var(--cherry);border-color:var(--cherry);color:var(--white)}
+
+.service-grid{display:grid;gap:26px}
+.service-card{
+  background:var(--white);border-radius:32px 32px 32px 10px;overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
+}
+/* Servicios sin fotografías: las imágenes se conservan solo en Portafolio. */
+.service-tag{
+  display:inline-flex;align-self:flex-start;background:var(--violet-soft);color:var(--violet);
+  font-size:.74rem;font-weight:700;padding:5px 12px;border-radius:999px;
+}
+.service-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.service-body h3{font-size:1.3rem}
+.service-body p{color:var(--ink-soft);font-size:.92rem;flex:1}
+.service-meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:4px}
+.service-price{font-family:var(--font-display);font-size:1.5rem;color:var(--cherry)}
+.service-price .desde{font-family:var(--font-body);font-weight:600;font-size:.72rem;color:var(--ink-soft);text-transform:lowercase;margin-right:4px}
+.service-duration{font-size:.82rem;color:var(--ink-soft);font-weight:600}
+.service-card .btn{margin-top:4px;width:100%}
+
+.service-note{
+  margin-top:40px;display:grid;gap:14px;background:var(--bubblegum-soft);border-radius:var(--radius-lg);
+  padding:26px 28px;
+}
+.service-note p{font-size:.9rem;color:var(--ink);opacity:.85}
+.service-note strong{color:var(--cherry-deep)}
+
+@media (min-width:640px){.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:980px){.service-grid{grid-template-columns:repeat(3,1fr)}.service-note{grid-template-columns:1fr 1fr}}
+
+/* ---------- Estudio ---------- */
+.studio-grid{display:grid;gap:18px}
+.studio-photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(51,37,43,.1)}
+.studio-photo img{width:100%;height:100%;object-fit:cover}
+.studio-photo.tall{aspect-ratio:3/4}
+.studio-photo.wide{aspect-ratio:4/3}
+
+@media (min-width:860px){
+  .studio-grid{grid-template-columns:1.1fr .9fr;grid-template-rows:auto auto}
+  .studio-photo.feature{grid-row:span 2}
+}
+
+.dog-card{
+  margin-top:40px;display:grid;gap:0;background:var(--bubblegum);border-radius:var(--radius-lg);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.dog-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dog-card-body{padding:30px 30px 34px;background:var(--white)}
+.dog-card-body h3{font-size:1.5rem;margin-bottom:10px}
+.dog-card-body p{color:var(--ink-soft)}
+
+@media (min-width:860px){
+  .dog-card{grid-template-columns:.85fr 1.15fr}
+  .dog-card img{height:100%;aspect-ratio:auto}
+}
+
+/* ---------- Ubicación ---------- */
+.location-grid{display:grid;gap:28px}
+.location-copy p{color:#D9CFCF;margin-bottom:14px}
+.location-copy p:last-child{margin-bottom:0}
+.map-frame{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.map-frame iframe{width:100%;height:100%;border:0}
+.section-ink .btn-secondary{border-color:var(--bubblegum);color:var(--bubblegum)}
+.section-ink .btn-secondary:hover{background:rgba(255,182,213,.12)}
+
+@media (min-width:860px){.location-grid{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* ---------- Reservas / políticas ---------- */
+.policy-grid{display:grid;gap:18px}
+.policy-card{background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow)}
+.policy-card h3{font-size:1.15rem;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.policy-card h3 svg{color:var(--cherry);flex:none}
+.policy-card p,.policy-card li{color:var(--ink-soft);font-size:.92rem}
+.policy-card li{display:flex;gap:10px;margin-bottom:8px}
+.policy-card li svg{flex:none;color:var(--violet);margin-top:3px}
+
+@media (min-width:860px){.policy-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- Footer / contacto ---------- */
+.site-footer{background:var(--ink);color:var(--cream);padding:56px 0 28px}
+.footer-top{display:grid;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(248,242,232,.14)}
+.footer-brand .brand-word{color:var(--cream)}
+.footer-brand p{margin-top:14px;color:#C9BFC2;max-width:34ch;font-size:.92rem}
+.footer-links h4{font-family:var(--font-body);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:#C9BFC2;margin-bottom:14px}
+.footer-links a{display:block;padding:6px 0;font-weight:600;color:var(--cream)}
+.footer-links a:hover{color:var(--bubblegum)}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding-top:22px;font-size:.82rem;color:#9C8F93}
+
+@media (min-width:640px){.footer-top{grid-template-columns:1.3fr .7fr .7fr}}
+
+/* ---------- WhatsApp flotante ---------- */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:120;background:#1EAD56;color:var(--white);
+  width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 14px 30px -10px rgba(30,173,86,.6);
+}
+.wa-float svg{width:28px;height:28px}
+
+/* ---------- Portafolio ---------- */
+.portfolio-hero{padding:56px 0 24px;text-align:left}
+.portfolio-hero h1{font-size:clamp(2.3rem,5vw,3.2rem)}
+.portfolio-hero p{margin-top:14px;color:var(--ink-soft);max-width:48ch}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gallery-item{
+  border-radius:var(--radius-sm);overflow:hidden;position:relative;aspect-ratio:3/4;box-shadow:var(--shadow);
+  background:var(--white);border:none;padding:0;display:block;width:100%;
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:14px 12px 10px;
+  background:linear-gradient(0deg,rgba(51,37,43,.85),transparent);
+  color:var(--white);font-size:.8rem;font-weight:600;text-align:left;
+}
+.gallery-item[hidden]{display:none}
+
+@media (min-width:640px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:980px){.gallery-grid{grid-template-columns:repeat(4,1fr)}}
+
+.portfolio-cta{margin-top:48px;text-align:center}
+.portfolio-cta p{color:var(--ink-soft);margin-bottom:16px}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;background:rgba(51,37,43,.92);display:none;align-items:center;justify-content:center;
+  z-index:200;padding:24px;
+}
+.lightbox.is-open{display:flex}
+.lightbox-inner{max-width:720px;width:100%;text-align:center}
+.lightbox-inner img{max-height:78vh;margin:0 auto;border-radius:16px;width:auto}
+.lightbox-caption{color:var(--cream);margin-top:14px;font-weight:600}
+.lightbox-close{
+  position:absolute;top:20px;right:20px;background:var(--white);border-radius:50%;
+  width:42px;height:42px;display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- Animación única de entrada del hero ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-content > *{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+  .hero-content > *:nth-child(1){animation-delay:.05s}
+  .hero-content > *:nth-child(2){animation-delay:.15s}
+  .hero-content > *:nth-child(3){animation-delay:.25s}
+  .hero-content > *:nth-child(4){animation-delay:.35s}
+  .hero-content > *:nth-child(5){animation-delay:.45s}
+  .portrait{opacity:0;animation:rise .8s ease .2s forwards}
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+}
+
+
+/* ===== CherryBeauty: portada adaptada a teléfonos =====
+   No altera el diseño de escritorio ni la página de Portafolio. */
+.mobile-hero-actions { display: none; }
+
+@media (max-width: 859px) {
+  /* El encabezado conserva el logo y CherryBeauty en una línea. */
+  .site-header .nav-inner { padding: 12px 20px; }
+  .site-header .brand { min-width: 0; }
+  .site-header .brand-word { white-space: nowrap; }
+
+  /* En teléfonos la fotografía y los accesos van primero. */
+  .hero.hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 26px 20px 58px;
+    overflow: hidden;
+  }
+  .hero .portrait {
+    order: 1;
+    justify-self: auto;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+  .hero .portrait-frame {
+    width: min(276px, 72vw);
+    aspect-ratio: 3 / 4;
+  }
+  .hero .portrait-tag { padding: 8px 14px; font-size: .76rem; }
+  .hero .mobile-hero-actions {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 390px;
+    margin: 12px auto 0;
+  }
+  .hero .mobile-hero-actions .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 12px;
+    font-size: .92rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .hero .mobile-hero-actions .mobile-agenda {
+    grid-column: 1 / -1;
+    min-height: 52px;
+    font-size: 1rem;
+  }
+  .hero .mobile-hero-actions .mobile-whatsapp { background: #168452; color: white; }
+  .hero .mobile-hero-actions .mobile-whatsapp:hover { background: #0d6b40; }
+  .hero .mobile-hero-actions .mobile-instagram {
+    background: transparent;
+    color: var(--violet);
+    border-color: var(--violet);
+  }
+  .hero .mobile-hero-actions .mobile-instagram:hover { background: var(--violet-soft); }
+
+  /* El texto de presentación queda más abajo en la portada móvil. */
+  .hero .hero-content { order: 3; width: 100%; margin-top: 40px; }
+  .hero .hero-content h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hero .hero-content .hero-lede { font-size: 1rem; }
+  .hero .hero-content .hero-actions { margin-top: 26px; }
+  .hero .hero-content .hero-actions .btn-primary { display: none; }
+  .hero .hero-content .hero-actions .btn-secondary { width: 100%; }
+}
