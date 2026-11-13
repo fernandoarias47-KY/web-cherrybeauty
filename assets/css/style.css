@@ -122,7 +122,7 @@ p{margin:0}
 }
 
 /* ---------- Hero ---------- */
-.hero{position:relative;padding:64px 0 80px;overflow:hidden}
+.hero{position:relative;padding-block:64px 80px;overflow:hidden}
 .hero-grid{display:grid;gap:48px;align-items:center}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:8px;color:var(--cherry-deep);
@@ -306,16 +306,49 @@ p{margin:0}
 
 @media (min-width:640px){.footer-top{grid-template-columns:1.3fr .7fr .7fr}}
 
-/* ---------- WhatsApp flotante ---------- */
+/* ---------- Acciones flotantes ---------- */
+.floating-actions{
+  position:fixed;right:18px;bottom:18px;z-index:120;
+  display:flex;align-items:center;gap:10px;
+}
+.booking-float{display:none}
 .wa-float{
-  position:fixed;right:18px;bottom:18px;z-index:120;background:#1EAD56;color:var(--white);
+  flex:none;background:#1EAD56;color:var(--white);
   width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   box-shadow:0 14px 30px -10px rgba(30,173,86,.6);
 }
 .wa-float svg{width:28px;height:28px}
 
+@media (max-width:767px){
+  html{scroll-padding-block:76px 88px}
+  .hero{padding-block:36px 56px}
+  .hero-grid{gap:32px}
+  .hero h1{font-size:clamp(2.15rem,7.5vw,3.3rem)}
+  .hero-lede{font-size:1rem}
+  .section{padding-block:54px}
+  .about-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .stat{padding:14px}
+  .stat strong{font-size:1.6rem}
+  .site-footer{padding-bottom:calc(88px + env(safe-area-inset-bottom, 0px))}
+  .floating-actions{
+    right:calc(14px + env(safe-area-inset-right, 0px));
+    bottom:calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+  .booking-float:not([hidden]){
+    display:inline-flex;min-height:48px;padding:10px 20px;
+    background:var(--bubblegum);color:var(--cherry-deep);
+    box-shadow:0 6px 20px rgba(51,37,43,.2);
+  }
+  .wa-float{width:52px;height:52px}
+}
+
+@media (max-width:380px){
+  .container,.mobile-menu{padding-inline:18px}
+  .hero-actions .btn{width:100%}
+}
+
 /* ---------- Portafolio ---------- */
-.portfolio-hero{padding:56px 0 24px;text-align:left}
+.portfolio-hero{padding-block:56px 24px;text-align:left}
 .portfolio-hero h1{font-size:clamp(2.3rem,5vw,3.2rem)}
 .portfolio-hero p{margin-top:14px;color:var(--ink-soft);max-width:48ch}
 

@@ -10,6 +10,15 @@
     el.href = waLink(el.getAttribute("data-wa-text"));
   });
 
+  const bookingFloat = document.querySelector(".booking-float");
+  if (bookingFloat) {
+    const updateBookingVisibility = () => {
+      bookingFloat.hidden = window.scrollY < 120;
+    };
+    window.addEventListener("scroll", updateBookingVisibility, { passive: true });
+    updateBookingVisibility();
+  }
+
   /* Menú móvil */
   const toggle = document.querySelector(".nav-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
