@@ -238,6 +238,21 @@
     });
   }
 
+  /* Anima cada elemento una sola vez cuando entra en pantalla. */
+  if ("IntersectionObserver" in window && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (!isIntersecting) return;
+        target.classList.add("motion-enter");
+        observer.unobserve(target);
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".section-head, .service-card, .gallery-item").forEach((element) => {
+      observer.observe(element);
+    });
+  }
+
   /* Pie de página: ícono check reutilizable para listas de políticas */
   document.querySelectorAll("[data-icon='check']").forEach((el) => (el.innerHTML = ICON_CHECK));
   document.querySelectorAll("[data-icon='sparkle']").forEach((el) => (el.innerHTML = ICON_SPARKLE));
